@@ -1,4 +1,4 @@
-# Config fst service to oracle linux
+# Config vsftpd service to oracle linux
 
 ## Config repository git
 
@@ -10,7 +10,7 @@ git clone https://github.com/cgalvisleon/ftp.git
 
 ```
 docker run -d -it --name oraclelinux oraclelinux:8.8
-docker exec -it ce79c2af1963 bin/sh
+docker exec -it 4e2537e1987e bin/sh
 ```
 
 ## Build
