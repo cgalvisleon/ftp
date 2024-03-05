@@ -49,4 +49,5 @@ docker cp ftp:/etc/vsftpd/ ./conf/
 useradd -s /bin/false -d /home/ftp/usuario_ftp usuario_ftp
 
 usermod -l usuario_ftp
+usermod -l usuario_ftp
 ```
