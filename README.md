@@ -20,8 +20,9 @@ docker exec -it 4e2537e1987e bin/sh
 
 ```
 docker build --no-cache -t my-ftp -f ./Dockerfile .
+docker run -d --rm --name ftp my-ftp:latest
 
-docker run --rm --name ftp my-ftp:latest
+
 docker run -it -p 20:20 -p 21:21 --name ftp my-ftp:latest
 docker run -d --name ftp my-ftp:latest
 docker run --name ftp my-ftp:latest
@@ -38,4 +39,10 @@ cd ftp
 docker-compose -p my-ftp -f ./ftp.yml up -d
 
 docker-compose -p my-ftp -f ./prd.yml down
+```
+
+## Copy file and dir with docker
+
+```
+docker cp ftp:/etc/vsftpd/ ./conf/
 ```
