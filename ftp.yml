@@ -8,6 +8,11 @@ services:
       options:
         max-size: "1m"
         max-file: "2"
+    ports:
+      - "20:20"
+      - "21:21"
+      - "21100-21110:21100-21110"
     volumes:
       - ./vsftpd.conf:/etc/vsftpd/vsftpd.conf
       - ./ftp:/var/ftp
+      - ./logs:/var/log/vsftpd
