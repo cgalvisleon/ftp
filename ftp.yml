@@ -2,11 +2,7 @@ version: "3"
 
 services:
   ftp:
-    # image: my-ftp:latest
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: my-ftp
+    image: my-ftp:latest
     logging:
       driver: "json-file"
       options:

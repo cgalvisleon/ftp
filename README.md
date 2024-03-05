@@ -26,6 +26,9 @@ docker run -it --rm --name ftp my-ftp:latest
 docker exec -it ftp /bin/sh
 
 docker run -it -p 20:20 -p 21:21 --name ftp my-ftp:latest
+
+cat /etc/passwd | cut -d: -f1
+
 ```
 
 ## deploy used docker-compose
