@@ -20,7 +20,6 @@ docker exec -it 4e2537e1987e bin/sh
 
 ```
 docker build --no-cache -t my-ftp -f ./Dockerfile .
-docker build --platform=linux/arm64 --no-cache -t my-ftp -f ./Dockerfile .
 
 docker run --rm --name ftp my-ftp:latest
 docker run -it -p 20:20 -p 21:21 --name ftp my-ftp:latest
