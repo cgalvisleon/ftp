@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    name:
+    container_name: my-ftp
     logging:
       driver: "json-file"
       options:
