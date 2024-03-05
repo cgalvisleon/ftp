@@ -4,7 +4,6 @@ RUN yum -y update && \
   yum -y install vsftpd && \
   yum clean all
 
-
 VOLUME /etc/vsftpd
 VOLUME /var/ftp
 VOLUME /var/log/vsftpd
