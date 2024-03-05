@@ -2,7 +2,7 @@ version: "3"
 
 services:
   ftp:
-    image: my-ftp:latest
+    # image: my-ftp:latest
     build:
       context: .
       dockerfile: Dockerfile
