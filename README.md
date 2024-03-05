@@ -24,11 +24,6 @@ docker run -d --rm --name ftp my-ftp:latest
 
 
 docker run -it -p 20:20 -p 21:21 --name ftp my-ftp:latest
-docker run -d --name ftp my-ftp:latest
-docker run --name ftp my-ftp:latest
-docker exec -it b95cb3dfdc00 bin/sh
-
-docker run -d -p 20:20 -p 21:21 --name mi-ftp my-ftp:latest
 ```
 
 ## deploy used docker-compose
