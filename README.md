@@ -33,11 +33,19 @@ git clone https://github.com/cgalvisleon/ftp.git
 cd ftp
 docker-compose -p my-ftp -f ./ftp.yml up -d
 
-docker-compose -p my-ftp -f ./prd.yml down
+docker-compose -p my-ftp -f ./ftp.yml down
 ```
 
 ## Copy file and dir with docker
 
 ```
 docker cp ftp:/etc/vsftpd/ ./conf/
+```
+
+## Basic command
+
+```
+useradd -s /bin/false -d /home/ftp/usuario_ftp usuario_ftp
+
+usermod -l usuario_ftp
 ```
