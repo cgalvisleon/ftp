@@ -17,4 +17,4 @@ services:
     volumes:
       - ./conf:/etc/vsftpd
       - ./ftp:/var/ftp
-      - ./logs:/var/log/vsftpd
+      # - ./logs:/var/log/vsftpd
