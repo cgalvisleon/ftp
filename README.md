@@ -25,7 +25,7 @@ docker run -it --rm --name ftp my-ftp:latest
 
 docker exec -it ftp /bin/sh
 
-docker run -d -p 20:20 -p 21:21 -v /conf:/etc/vsftpd -v /ftp:/var/ftp --name ftp my-ftp:latest
+docker run -d -p 20:20 -p 21:21 -v ./conf:/etc/vsftpd -v ./ftp:/var/ftp --name ftp my-ftp:latest
 
 cat /etc/passwd | cut -d: -f1
 
