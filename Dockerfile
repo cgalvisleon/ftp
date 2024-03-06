@@ -11,7 +11,7 @@ RUN echo 'ftpuser:Energia+1' | chpasswd
 # RUN bash -c 'echo ftpuser >> /etc/vsftpd/user_list'
 # Workdir /var/ftp
 # RUN chown nobody:nobody /var/ftp
-RUN chmod a-w /var/ftp
+# RUN chmod a-w /var/ftp
 RUN chown -R ftpuser:ftpuser /var/ftp
 RUN chmod a-w /var/ftp
 # RUN chmod 0777 /var/ftp
