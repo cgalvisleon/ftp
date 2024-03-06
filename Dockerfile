@@ -13,7 +13,7 @@ RUN bash -c 'echo ftpuser >> /etc/vsftpd/user_list'
 RUN chown nobody:nobody /var/ftp
 RUN chmod a-w /var/ftp
 RUN chown ftpuser:ftpuser /var/ftp
-RUN chmod 0700 /var/ftp
+RUN chmod 0777 /var/ftp
 
 VOLUME /etc/vsftpd
 VOLUME /var/ftp
