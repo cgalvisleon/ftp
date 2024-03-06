@@ -12,6 +12,6 @@ services:
       - "20:20"
       - "21:21"
     volumes:
-      - ./conf:/etc/vsftpd
+      # - ./conf:/etc/vsftpd
       - ./ftp:/var/ftp
       # - ./logs:/var/log/vsftpd
