@@ -19,6 +19,8 @@ docker exec -it 4e2537e1987e bin/sh
 ## Build
 
 ```
+chmod -R a+w ftp
+
 docker build --no-cache -t my-ftp -f ./Dockerfile .
 docker run -d --rm -p 20:20 -p 21:21 -v /conf:/etc/vsftpd -v /ftp:/var/ftp --name ftp my-ftp:latest
 docker run -it --rm --name ftp my-ftp:latest
