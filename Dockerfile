@@ -9,7 +9,7 @@ COPY ./conf/vsftpd.conf /etc/vsftpd/vsftpd.conf
 RUN useradd -m -s /bin/bash ftpuser
 RUN echo 'ftpuser:Energia+1' | chpasswd
 RUN mkdir -p /var/ftp
-RUN chmod -R a+w /var/ftp
+RUN chown -R ftpuser:ftpuser /home/vsftpd/
 
 # RUN bash -c 'echo ftpuser >> /etc/vsftpd/user_list'
 # Workdir /var/ftp
