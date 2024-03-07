@@ -13,7 +13,7 @@ services:
     ports:
       - "20:20"
       - "21:21"
-    volumes:
-      # - "./conf:/etc/vsftpd"
-      # - "./ftp:/var/ftp"
+    # volumes:
+    # - "./conf:/etc/vsftpd"
+    # - "./ftp:/var/ftp"
     # - "./logs:/var/log/vsftpd"
