@@ -6,6 +6,7 @@ RUN yum -y update && \
 
 COPY ./conf/vsftpd.conf /etc/vsftpd/vsftpd.conf
 COPY run-vsftpd.sh /usr/sbin/
+RUN chmod +x /usr/sbin/run-vsftpd.sh
 
 RUN useradd -m -s /bin/bash ftpuser
 RUN echo 'ftpuser:Energia+1' | chpasswd
