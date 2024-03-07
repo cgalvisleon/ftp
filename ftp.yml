@@ -2,9 +2,7 @@ version: "3"
 
 services:
   ftp:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: my-ftp:latest
     logging:
       driver: "json-file"
       options:
@@ -15,5 +13,5 @@ services:
       - "21:21"
     volumes:
       - "./ftp:/var/ftp"
-    # - "./conf:/etc/vsftpd"
-    # - "./logs:/var/log/vsftpd"
+        # - "./conf:/etc/vsftpd"
+        # - "./logs:/var/log/vsftpd"
