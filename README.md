@@ -56,3 +56,11 @@ useradd -s /bin/false -d /home/ftp/usuario_ftp usuario_ftp
 
 usermod -l usuario_ftp
 ```
+
+```
+docker run -d -v /home:/home/vsftpd \
+-p 20:20 -p 21:21 -p 21100-21110:21100-21110 \
+-e FTP_USER=ftpuser -e FTP_PASS=Energia+1 \
+-e PASV_ADDRESS=127.0.0.1 -e PASV_MIN_PORT=21100 -e PASV_MAX_PORT=21110 \
+--name vsftpd --restart=always fauria/vsftpd
+```
