@@ -10,7 +10,8 @@ COPY ./conf/vsftpd.conf /etc/vsftpd/vsftpd.conf
 
 RUN useradd -m -s /bin/bash ftpuser
 RUN echo 'ftpuser:Energia+1' | chpasswd
-RUN mkdir -p /var/ftp
+RUN mkdir -p /home/vsftpd/
+RUN chown -R ftpuser:ftpuser /home/vsftpd/
 # RUN chown -R ftpuser:ftpuser /var/ftp/
 # RUN chown -R ftpuser:ftpuser /var/ftp/
 
@@ -23,7 +24,7 @@ RUN mkdir -p /var/ftp
 # RUN chmod 0777 /var/ftp
 # VOLUME /etc/vsftpd
 
-VOLUME /var/ftp
+VOLUME /home/vsftpd
 VOLUME /var/log/vsftpd
 
 EXPOSE 20 21
