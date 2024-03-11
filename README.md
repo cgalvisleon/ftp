@@ -64,3 +64,9 @@ docker run -d -v /home:/home/vsftpd \
 -e PASV_ADDRESS=127.0.0.1 -e PASV_MIN_PORT=21100 -e PASV_MAX_PORT=21110 \
 --name vsftpd --restart=always fauria/vsftpd
 ```
+
+## Clear images
+
+```
+docker system prune -a --volumes -f
+```
