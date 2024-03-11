@@ -12,7 +12,7 @@ services:
       - "20:20"
       - "21:21"
     volumes:
-      - "./var/ftp:/var/ftp"
+      - "./ftp:/var/ftp"
       # - "home_ftp:/var/ftp"
       # - "./conf:/etc/vsftpd"
       # - "./logs:/var/log/vsftpd"
