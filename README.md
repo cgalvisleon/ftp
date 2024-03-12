@@ -70,3 +70,22 @@ docker run -d -v /home:/home/vsftpd \
 ```
 docker system prune -a --volumes -f
 ```
+
+docker run -itd --restart=always \
+ -p 20-22:20-22 \
+ -p 80:80 \
+ -p 40000-40050:40000-40050 \
+ -v $LOCAL_DIR/data:/srv/ftp \
+    -v $LOCAL_DIR/log:/var/log \
+    -v $LOCAL_DIR/home:/home \
+    -e PRIVATE_PASSWD=secret \
+    -e PASV_ADDRESS=$PUBLIC_IP_ADDRESS \
+ ustclug/ftp
+
+docker run -itd --restart=always \
+ -p 20-21:20-21 \
+ -p 40000-40050:40000-40050 \
+ -v /ftp/ftp:/fpt/ftp \
+ -e PRIVATE_PASSWD=secret \
+ -e PASV_ADDRESS=$PUBLIC_IP_ADDRESS \
+ ustclug/ftp
