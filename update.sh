@@ -11,3 +11,6 @@ docker build --no-cache -t my-ftp -f ./Dockerfile .
 
 # start the containers
 docker-compose -p my-ftp -f ./ftp.yml up -d
+
+# list the running containers
+docker ps -a
