@@ -10,7 +10,10 @@ RUN useradd -m -s /bin/bash ftpuser
 RUN echo 'ftpuser:Energia+1' | chpasswd
 RUN mkdir -p /var/ftp/
 RUN chown -R ftpuser:ftpuser /var/ftp/
-RUN chmod -R 777 /var/ftp/
+RUN chmod -R 0777 /var/ftp/
+
+VOLUME /var/ftp
+VOLUME /var/log/vsftpd
 
 EXPOSE 20 21
 

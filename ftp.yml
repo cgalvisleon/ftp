@@ -14,6 +14,8 @@ services:
       - 21100-21110:21100-21110
     volumes:
       - home_ftp:/var/ftp
+      - log_ftp:/var/log/ftp
 
 volumes:
   home_ftp:
+  log_ftp:
