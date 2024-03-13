@@ -89,3 +89,10 @@ docker run -itd --restart=always \
  -e PRIVATE_PASSWD=secret \
  -e PASV_ADDRESS=$PUBLIC_IP_ADDRESS \
  ustclug/ftp
+
+## SSH
+
+```
+chmod +x update.sh
+./update.sh
+```
