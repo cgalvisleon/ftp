@@ -12,7 +12,7 @@ services:
       - 0.0.0.0:20:20
       - 0.0.0.0:21:21
       - 21100-21110:21100-21110
-    params:
+    environment:
       - PASV_ADDRESS=172.31.130.70
     volumes:
       - home_ftp:/var/ftp
