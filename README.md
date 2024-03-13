@@ -96,3 +96,9 @@ docker run -itd --restart=always \
 chmod +x update.sh
 ./update.sh
 ```
+
+### Volume
+
+```
+docker volume inspect my-vol
+```
