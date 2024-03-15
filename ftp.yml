@@ -13,7 +13,7 @@ services:
       - 0.0.0.0:21:21
       - 21100-21150:21100-21150
     environment:
-      - PASV_ADDRESS=172.31.130.1
+      - PASV_ADDRESS=172.31.130.70
     volumes:
       - home_ftp:/var/ftp
       - log_ftp:/var/log/ftp
