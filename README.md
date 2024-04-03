@@ -43,6 +43,13 @@ docker-compose -p my-ftp -f ./ftp.yml up -d
 docker-compose -p my-ftp -f ./ftp.yml down
 ```
 
+## deploy used swarm mode
+
+```
+docker stack deploy -c ./ftp.yml ftp
+docker stack rm ftp
+```
+
 ## Copy file and dir with docker
 
 ```
