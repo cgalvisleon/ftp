@@ -1,3 +1,19 @@
+# Install docker
+
+```
+sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+sudo dnf makecache
+sudo dnf install docker-ce docker-ce-cli containerd.io
+sudo systemctl start docker
+sudo systemctl enable docker
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
+
+```
+
 # Config vsftpd service to oracle linux
 
 ## Config repository git
@@ -47,6 +63,8 @@ docker-compose -p my-ftp -f ./ftp.yml down
 
 ```
 docker swarm init
+
+docker swarm init --advertise-addr 172.31.130.70
 
 docker swarm join-token worker
 
