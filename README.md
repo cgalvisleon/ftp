@@ -33,7 +33,7 @@ cat /etc/passwd | cut -d: -f1
 
 ```
 
-## deploy used docker-compose
+## Deploy used docker-compose
 
 ```
 git clone https://github.com/cgalvisleon/ftp.git
@@ -68,7 +68,7 @@ docker service create -d \
 meltwater/docker-cleanup:latest
 ```
 
-## deploy used swarm mode
+## Deploy used swarm mode
 
 ```
 docker stack deploy -c ./ftp.yml ftp
