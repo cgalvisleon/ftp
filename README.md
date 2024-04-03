@@ -53,6 +53,21 @@ docker swarm join-token worker
 docker swarm leave --force
 ```
 
+## Up clean service
+
+```
+docker service create -d \
+-e CLEAN_PERIOD=900 \
+-e DELAY_TIME=600 \
+--log-driver json-file \
+--log-opt max-size=1m \
+--log-opt max-file=2 \
+--name=cleanup \
+--mode global \
+--mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
+meltwater/docker-cleanup:latest
+```
+
 ## deploy used swarm mode
 
 ```
