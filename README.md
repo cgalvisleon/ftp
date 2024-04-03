@@ -43,6 +43,16 @@ docker-compose -p my-ftp -f ./ftp.yml up -d
 docker-compose -p my-ftp -f ./ftp.yml down
 ```
 
+## How to begin swarm mode in docker
+
+```
+docker swarm init
+
+docker swarm join-token worker
+
+docker swarm leave --force
+```
+
 ## deploy used swarm mode
 
 ```
