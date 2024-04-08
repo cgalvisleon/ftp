@@ -121,6 +121,7 @@ docker run -d -v /home:/home/vsftpd \
 docker system prune -a --volumes -f
 ```
 
+```
 docker run -itd --restart=always \
  -p 20-22:20-22 \
  -p 80:80 \
@@ -139,6 +140,7 @@ docker run -itd --restart=always \
  -e PRIVATE_PASSWD=secret \
  -e PASV_ADDRESS=$PUBLIC_IP_ADDRESS \
  ustclug/ftp
+```
 
 ## SSH
 
@@ -154,4 +156,12 @@ chmod +x deploy.sh
 
 ```
 docker volume inspect my-vol
+```
+
+### Sert version
+
+```
+git update &&
+git tag v1.0.0 &&
+git push origin --tags
 ```
