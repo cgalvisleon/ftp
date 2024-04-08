@@ -145,6 +145,9 @@ docker run -itd --restart=always \
 ```
 chmod +x update.sh
 ./update.sh
+
+chmod +x deploy.sh
+./deploy.sh
 ```
 
 ### Volume

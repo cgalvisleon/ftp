@@ -27,7 +27,7 @@ ENV PASV_PROMISCUOUS NO
 ENV PORT_PROMISCUOUS NO
 
 VOLUME /var/ftp
-VOLUME /var/log/vsftpd
+VOLUME /var/log/ftp
 
 EXPOSE 20 21
 
