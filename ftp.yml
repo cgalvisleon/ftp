@@ -9,7 +9,7 @@ services:
         max-size: "1m"
         max-file: "2"
     deploy:
-      replicas: 2
+      replicas: 1
     ports:
       - 0.0.0.0:20:20
       - 0.0.0.0:21:21
@@ -17,9 +17,9 @@ services:
     environment:
       - PASV_ADDRESS=172.31.130.70
     volumes:
-      - home_ftp:/var/ftp
+      - /var/ftp:/var/ftp
       - log_ftp:/var/log/ftp
 
 volumes:
-  home_ftp:
+  # home_ftp:
   log_ftp:
