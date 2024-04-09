@@ -18,4 +18,4 @@ services:
       - PASV_ADDRESS=172.31.130.70
     volumes:
       - /var/ftp:/var/ftp
-      - /var/log/ftp:/var/log/ftp
+      - /var/log/ftp:/var/log
