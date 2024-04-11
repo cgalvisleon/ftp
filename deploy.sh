@@ -14,3 +14,6 @@ docker stack deploy -c ./ftp.yml ftp
 
 # list the running containers
 docker ps -a
+
+# list the running services
+docker service ls
