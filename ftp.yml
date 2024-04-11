@@ -9,7 +9,7 @@ services:
         max-size: "1m"
         max-file: "2"
     deploy:
-      replicas: 1
+      replicas: 5
     ports:
       - 0.0.0.0:20:20
       - 0.0.0.0:21:21
