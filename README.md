@@ -55,7 +55,6 @@ cat /etc/passwd | cut -d: -f1
 git clone https://github.com/cgalvisleon/ftp.git
 cd ftp
 docker-compose -p my-ftp -f ./ftp.yml up -d
-
 docker-compose -p my-ftp -f ./ftp.yml down
 ```
 
